@@ -16,9 +16,26 @@
 
 # Tutorials
 ## Install and configuration
-1. create a virtual environment: `virtualenv -p /usr/bin/python3.8 venv_3.8`
-2. activate the virtual environment: `source ~/venv_3.8/bin/activate`
+1. Create a virtual environment: `virtualenv -p /usr/bin/python3.8 venv_3.8`
+2. Activate the virtual environment: `source ~/venv_3.8/bin/activate`
+3. Clone this repository:
+    ```bash
+    cd $HOME/
+    git clone https://github.com/huikul/Dexterhuous_grasp.git
+    ```
+4. Install all requirements in `requirement.txt`    
+    ```bash
+    cd $HOME/Dexterous_grasp
+    pip install -r requirements.txt
+    ```
 
+5. Install the revised meshpy (based on [Berkeley Automation Lab: meshpy](https://github.com/BerkeleyAutomation/meshpy))
+    ```bash
+    cd $HOME/Dexterous_grasp/meshpy
+    python setup.py develop
+    ```
+    
+    
 
 ## Simulation and visualization
 
