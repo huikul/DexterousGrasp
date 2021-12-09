@@ -1,0 +1,7 @@
+{"radius": 0.015,
+  "force_limit": 200.0,
+  "hight": 0.05,
+  "max_depth": 0.03,
+  "elastic_limit_coeffi": 0.005,
+  "friction_coeffi": 0.5
+}

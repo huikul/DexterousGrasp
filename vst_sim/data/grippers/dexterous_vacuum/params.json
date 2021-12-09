@@ -1,0 +1,8 @@
+{"radius": 0.025,
+  "radius_vacuum": 0.02,
+  "max_depth": 0.04,
+  "hight": 0.05,
+  "force_limit": 200.0,
+  "friction_coeffi": 0.5,
+  "scale_size": 2.0
+}
