@@ -56,4 +56,14 @@ sudo apt install python3-pcl
 sudo apt-get install pcl-tools
 copy /usr/lib/python3/dist-packages/pcl  to  /home/acro/venv_3.8/lib/python3.8/site-packages/pcl
 
+3D meshes: https://drive.google.com/file/d/1_GWzLP1bYUe6Ersm9kmDv4I3cEJIqTh-/view?usp=sharing 
+
+
+training dataset: 
+https://drive.google.com/file/d/1fJBxswzjU5H4lqjVxG3UMEkH3Qm9gaUu/view?usp=sharing
+
+
+back link: https://pan.baidu.com/s/1TE0AiBnN_gUpVO2zjXhiCA
+Extract code: abcd
+
 
