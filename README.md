@@ -1,7 +1,7 @@
 # Introduction
 
 
-<img src="tutorial_imgs/introduction.png" width="100%" alt="flowchart">
+<img src="tutorials_imgs/introduction.png" width="100%" alt="flowchart">
 
 this repository is develoed based on the Dex-Net (https://github.com/BerkeleyAutomation/dex-net). Many source files of it have been revised.
 
