@@ -69,7 +69,10 @@
    
    Here, we provide a brief exmaple of the grasp simulatio based on a 3D mesh from the YCB bencmarks:
 
-
+1. Dowload the 3D mesh [here](https://drive.google.com/file/d/1_GWzLP1bYUe6Ersm9kmDv4I3cEJIqTh-/view?usp=sharing) and unzip the files to the folder ```$HOME/Dexterous_grasp/3D_meshes```, as shown in the figure below:
+   <img src="tutorials_imgs/3D_meshes_example.png" width="100%" alt="3D_mesh>
+    
+2. 
 
 
 
