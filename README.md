@@ -102,6 +102,9 @@
     ```
     <img src="tutorials_imgs/05_grasp_simulations_sub_i.png" width="50%" alt="local_point_cloud">
 
+### Extra tips for grasp simulation
+1. 
+
 
 
 ## Train a neural network
