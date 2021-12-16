@@ -10,7 +10,8 @@
 
 ++++++++++++++++++++++++++++++++
 # Video demo
-
+1. https://youtu.be/Sy3rW9zp_tk
+2. https://1drv.ms/v/s!Aok6lAYtb5vYzFuZliqSTU3sqO3o?e=UIQRfN
 +++++++++++++++++++++++++++++++++++++
 
 
@@ -70,7 +71,7 @@
    Here, we provide a brief exmaple of the grasp simulatio based on a 3D mesh from the YCB bencmarks:
 
 1. Dowload the 3D mesh [here](https://drive.google.com/file/d/1_GWzLP1bYUe6Ersm9kmDv4I3cEJIqTh-/view?usp=sharing) and unzip the files to the folder ```$HOME/Dexterous_grasp/3D_meshes```, as shown in the figure below:
-   <img src="tutorials_imgs/3D_meshes_example.png" width="100%" alt="3D_mesh">
+   <img src="tutorials_imgs/3D_meshes_example.png" width="50%" alt="3D_mesh">
     
 2. Generate "nontexture.obj" for the 3D meshes:
     ```bash
@@ -103,25 +104,25 @@
     <img src="tutorials_imgs/05_grasp_simulations_sub_i.png" width="50%" alt="local_point_cloud">
 
 ### Extra tips for grasp simulation
-1. 
+1. To generate a large-scale dataset, please adjust the parameters in the file `$HOME/Dexterous_grasp/vst_sim/data/grippers/dexterous_vacuum/params.json`, and make sure the variable `scale_size=1.0`
 
+2. Replace the Python scripts in `Step 4` and `Step 5`, and run the scirpt one by one: 
+    ```bash
+    python 04_generate-dataset-Dexterous_vacuum.py
+    python 05_generate-point_cloud.py
+    ```
 
+3. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFniMQyjCUnpmy9w?e=NUjMNd) to download our 3D mesh.
 
 ## Train a neural network
 
 
 # Citation
+Will be available soon.
 
-about PCL
-
-about extra packages
-
-about gripper size   scale_size
+https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1
 
 
-sudo apt install python3-pcl
-sudo apt-get install pcl-tools
-copy /usr/lib/python3/dist-packages/pcl  to  /home/acro/venv_3.8/lib/python3.8/site-packages/pcl
 
 3D meshes: https://drive.google.com/file/d/1_GWzLP1bYUe6Ersm9kmDv4I3cEJIqTh-/view?usp=sharing 
 
