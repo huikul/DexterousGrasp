@@ -5,15 +5,12 @@
 <img src="tutorials_imgs/01_flowchart_large.svg" width="100%" alt="flowchart">
 
 ## Extra explanation
-1) This repository is develoed based on the Dex-Net (https://github.com/BerkeleyAutomation/dex-net). Many source files have been revised.
-2) This repository has been tested on Ubuntu 16.0 (python 3.6) and Ubuntu 20.0 (python 3.8), and the following tutorial in based on Ubuntu 20.0 (python 3.8).
+1) This repository is developed based on the Dex-Net (https://github.com/BerkeleyAutomation/dex-net). Many source files have been revised.
+2) This repository has been tested on Ubuntu 16.0 (python 3.6) and Ubuntu 20.0 (python 3.8), and the following tutorial is based on Ubuntu 20.0 (python 3.8).
 
-++++++++++++++++++++++++++++++++
 # Video demo
 1. https://youtu.be/Sy3rW9zp_tk
 2. https://1drv.ms/v/s!Aok6lAYtb5vYzFuZliqSTU3sqO3o?e=UIQRfN
-+++++++++++++++++++++++++++++++++++++
-
 
 # Tutorials
 ## Install and configuration
@@ -47,17 +44,15 @@
     ```  
     
 7. Install the python-pcl package:
-    For Ubuntu 16, the python-pcl package can be installed by the command ```pip install python-pcl``` or  by the source package (refer the tutorial in the repository [PointNetGPD](https://github.com/BerkeleyAutomation/meshpy)) under virtual Python environment. However, ```pip install python-pcl``` is not available for Ubuntu 20.0, and the source package can not be compiled successfully on every PC with Ubuntu 20.0. If you are failed to install the python-pcl in your virtual environment, here we provide another method:
+    For Ubuntu 16, the python-pcl package can be installed by the command ```pip install python-pcl``` or  by the source package (refer to the tutorial in the repository [PointNetGPD](https://github.com/BerkeleyAutomation/meshpy)) under virtual Python environment. However, ```pip install python-pcl``` is not available for Ubuntu 20.0, and the source package can not be compiled successfully on every PC with Ubuntu 20.0. If you are failed to install the python-pcl in your virtual environment, here we provide another method:
     ```
     sudo add-apt-repository ppa:sweptlaser/python3-pcl
     sudo apt update
     sudo apt install python3-pcl
     ```
-    Then copy the python-pcl package to your virtual environment, for example:
-    ```
-    copy the folder from /usr/lib/python3/dist-packages/pcl to the path $HOME/venv_3.8/lib/python3.8/site-packages/pcl
-    ```
-    Note: this method cannot make sure all pcl functions run well in the virtual environment (e.g.: pcl visualization), but we can make sure the functions used in our repository can be used.
+    Then copy the python-pcl package to your virtual environment, for example: copy the folder from '/usr/lib/python3/dist-packages/pcl` to the path `$HOME/venv_3.8/lib/python3.8/site-packages/pcl`
+
+    Note: this method cannot make sure all PCL functions run well in the virtual environment (e.g.: PCL visualization), but we can make sure the functions used in our repository are OK.
     
 8. Install the grasp simulator:   
     ```bash
