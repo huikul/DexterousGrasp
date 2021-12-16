@@ -110,7 +110,7 @@
 3. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFniMQyjCUnpmy9w?e=NUjMNd) to download our 3D mesh.
 
 ## Train a neural network
-1. Here we provide a neural network training demo based on a mini dataset, please dowload the mini dataset [here](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1).
+1. Here we provide a neural network training demo based on a mini dataset. Please download the mini dataset [here](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1).
 
 2. Unzip the mini dataset and copy them into the path `$HOME/Dexterous_grasp/dataset`.  
     <img src="tutorials_imgs/dataset_example.png" width="50%" alt="dataset">  
