@@ -35,7 +35,32 @@
     python setup.py develop
     ```
     
+6. Install the SDFGen from [GitHub](https://github.com/jeffmahler/SDFGen.git):
+    ```bash
+    git clone https://github.com/jeffmahler/SDFGen.git
+    cd SDFGen
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ```  
     
+7. Install the python-pcl package:
+    For Ubuntu 16, the python-pcl package can be installed by the command ```pip install python-pcl``` or  by the soruce package (refer the tutorial in the repository [PointNetGPD](https://github.com/BerkeleyAutomation/meshpy)) under virtual Python environment. However, ```pip install python-pcl``` is not available for Ubuntu 20.0. Here we can use another method:
+    ```
+    sudo add-apt-repository ppa:sweptlaser/python3-pcl
+    sudo apt update
+    sudo apt install python3-pcl
+    ```
+    Then copy the 
+    
+    
+    
+7. Install the grasp simulator:   
+    ```bash
+    cd $HOME/Dexterous_grasp/vst_sim
+    python setup.py develop
+    ```
 
 ## Simulation and visualization
 
@@ -43,7 +68,7 @@
 ## Train a neural network
 
 
-
+# Citation
 
 about PCL
 
