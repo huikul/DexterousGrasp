@@ -4,7 +4,7 @@
 <img src="tutorials_imgs/introduction.png" width="100%" alt="abstract">
 <img src="tutorials_imgs/01_flowchart_large.svg" width="100%" alt="flowchart">
 
-# Extra explanation
+## Extra explanation
 1) This repository is develoed based on the Dex-Net (https://github.com/BerkeleyAutomation/dex-net). Many source files have been revised.
 2) This repository has been tested on Ubuntu 16.0 (python 3.6) and Ubuntu 20.0 (python 3.8), and the following tutorial in based on Ubuntu 20.0 (python 3.8).
 
@@ -58,13 +58,16 @@
     ```
     Note: this method cannot make sure all pcl functions run well in the virtual environment (e.g.: pcl visualization), but we can make sure the functions used in our repository can be used.
     
-7. Install the grasp simulator:   
+8. Install the grasp simulator:   
     ```bash
     cd $HOME/Dexterous_grasp/vst_sim
     python setup.py develop
     ```
 
 ## Simulation and visualization
+   Our grasp simulation is implemented with a virtual dexterous gripper and a set of high-resolution 3D meshes of objects from [YCB benchmarks](https://www.ycbbenchmarks.com/). To generate a large-scale dataset, please download the 3D meshes via the [link](http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/)
+   
+   Here, we provide a brief exmaple of the grasp simulatio based on a 3D mesh from the YCB bencmarks:
 
 
 
