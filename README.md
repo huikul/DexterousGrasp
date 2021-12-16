@@ -93,14 +93,14 @@
     python 04_generate-dataset-Dexterous_vacuum_vis.py
     ``` 
     The virtual grasping trial
-    <img src="tutorials_imgs/05_grasp_simulations_sub_c.png" width="100%" alt="virtual_grasp">
+    <img src="tutorials_imgs/05_grasp_simulations_sub_c.png" width="50%" alt="virtual_grasp">
     The real-world grasping trial with the similar object
-    <img src="tutorials_imgs/05_grasp_simulations_sub_l.png" width="100%" alt="real_grasp">
+    <img src="tutorials_imgs/05_grasp_simulations_sub_l.png" width="50%" alt="real_grasp">
 6. Visualize a local point cloud for the grasping trial:
     ```bash
     python 05_generate-point_cloud_vis.py
     ```
-    <img src="tutorials_imgs/05_grasp_simulations_sub_i.png" width="100%" alt="local_point_cloud">
+    <img src="tutorials_imgs/05_grasp_simulations_sub_i.png" width="50%" alt="local_point_cloud">
 
 
 
