@@ -72,7 +72,35 @@
 1. Dowload the 3D mesh [here](https://drive.google.com/file/d/1_GWzLP1bYUe6Ersm9kmDv4I3cEJIqTh-/view?usp=sharing) and unzip the files to the folder ```$HOME/Dexterous_grasp/3D_meshes```, as shown in the figure below:
    <img src="tutorials_imgs/3D_meshes_example.png" width="100%" alt="3D_mesh">
     
-2. 
+2. Generate "nontexture.obj" for the 3D meshes:
+    ```bash
+    cd $HOME/Dexterous_grasp/vst_sim/apps
+    python 01_pre_process_render_obj.py
+    ```
+
+3. Generate "nontexture.sdf" ([Signed Distance Field](https://en.wikipedia.org/wiki/Signed_distance_function)) for the 3D meshes:"
+    ```bash
+    python 02_pre_process_render_sdf.py
+    ```
+
+4. Generate "surface_normals_pcl.npy" for the 3D meshes:"
+    ```bash
+    python 03_pre_process_calculate_obj_normals.py
+    ```
+    
+5. Visualize a virtual grasping trial:"
+    ```bash
+    python 04_generate-dataset-Dexterous_vacuum_vis.py
+    ``` 
+    The virtual grasping trial
+    <img src="tutorials_imgs/05_grasp_simulations_sub_c.png" width="100%" alt="virtual_grasp">
+    The real-world grasping trial with the similar object
+    <img src="tutorials_imgs/05_grasp_simulations_sub_l.png" width="100%" alt="real_grasp">
+6. Visualize a local point cloud for the grasping trial:
+    ```bash
+    python 05_generate-point_cloud_vis.py
+    ```
+    <img src="tutorials_imgs/05_grasp_simulations_sub_i.png" width="100%" alt="local_point_cloud">
 
 
 
