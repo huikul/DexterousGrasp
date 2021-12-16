@@ -50,7 +50,7 @@
     sudo apt update
     sudo apt install python3-pcl
     ```
-    Then copy the python-pcl package to your virtual environment, for example: copy the folder from '/usr/lib/python3/dist-packages/pcl` to the path `$HOME/venv_3.8/lib/python3.8/site-packages/pcl`
+    Then copy the python-pcl package to your virtual environment, for example: copy the folder from ```/usr/lib/python3/dist-packages/pcl``` to the path ```$HOME/venv_3.8/lib/python3.8/site-packages/pcl```
 
     Note: this method cannot make sure all PCL functions run well in the virtual environment (e.g.: PCL visualization), but we can make sure the functions used in our repository are OK.
     
