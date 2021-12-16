@@ -125,7 +125,7 @@
     cd $HOME/Dexterous_grasp/NeuralNetwork/data
     python -m visdom.server -port 8031 -env_path ~/Dexterous_grasp/NeuralNetwork/data
     ```
-4. Open your web browser, and visit the webpage below to monitor the training progresslo:
+4. Open your web browser, and visit the webpage below to monitor the training progress:
     ```bash
     http://localhost:8031/
     ```
