@@ -52,7 +52,7 @@
     ```
     Then copy the python-pcl package to your virtual environment, for example: copy the folder from ```/usr/lib/python3/dist-packages/pcl``` to the path ```$HOME/venv_3.8/lib/python3.8/site-packages/pcl```
 
-    Note: this method cannot make sure all PCL functions run well in the virtual environment (e.g.: PCL visualization), but we can make sure the functions used in our repository are OK.
+    Note: This method cannot make sure all PCL functions run well in the virtual environment (e.g.: PCL visualization), but we can make sure the functions used in our repository are OK.
     
 8. Install the grasp simulator:   
     ```bash
@@ -63,28 +63,28 @@
 ## Simulation and visualization
    Our grasp simulation is implemented with a virtual dexterous gripper and a set of high-resolution 3D meshes of objects from [YCB benchmarks](https://www.ycbbenchmarks.com/). To generate a large-scale dataset, please download the 3D meshes via the [link](http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/)
    
-   Here, we provide a brief exmaple of the grasp simulatio based on a 3D mesh from the YCB bencmarks:
+   Here, we provide a brief example of the grasp simulation based on a 3D mesh from the YCB benchmarks:
 
-1. Dowload the 3D mesh [here](https://drive.google.com/file/d/1_GWzLP1bYUe6Ersm9kmDv4I3cEJIqTh-/view?usp=sharing) and unzip the files to the folder ```$HOME/Dexterous_grasp/3D_meshes```, as shown in the figure below:
+1. Download the 3D mesh [here](https://drive.google.com/file/d/1_GWzLP1bYUe6Ersm9kmDv4I3cEJIqTh-/view?usp=sharing) and unzip the files to the folder ```$HOME/Dexterous_grasp/3D_meshes```, as shown in the figure below:
    <img src="tutorials_imgs/3D_meshes_example.png" width="50%" alt="3D_mesh">
     
-2. Generate "nontexture.obj" for the 3D meshes:
+2. Generate `nontexture.obj` for the 3D meshes:
     ```bash
     cd $HOME/Dexterous_grasp/vst_sim/apps
     python 01_pre_process_render_obj.py
     ```
 
-3. Generate "nontexture.sdf" ([Signed Distance Field](https://en.wikipedia.org/wiki/Signed_distance_function)) for the 3D meshes:"
+3. Generate `nontexture.sdf` ([Signed Distance Field](https://en.wikipedia.org/wiki/Signed_distance_function)) for the 3D meshes:
     ```bash
     python 02_pre_process_render_sdf.py
     ```
 
-4. Generate "surface_normals_pcl.npy" for the 3D meshes:"
+4. Generate `surface_normals_pcl.npy` for the 3D meshes:
     ```bash
     python 03_pre_process_calculate_obj_normals.py
     ```
     
-5. Visualize a virtual grasping trial:"
+5. Visualize a virtual grasping trial:
     ```bash
     python 04_generate-dataset-Dexterous_vacuum_vis.py
     ``` 
@@ -101,7 +101,7 @@
 ### Extra tips for grasp simulation
 1. To generate a large-scale dataset, please adjust the parameters in the file `$HOME/Dexterous_grasp/vst_sim/data/grippers/dexterous_vacuum/params.json`, and make sure the variable `scale_size=1.0`
 
-2. Replace the Python scripts in `Step 4` and `Step 5`, and run the scirpt one by one: 
+2. Replace the Python scripts in `Step 4` and `Step 5`, and run the scripts one by one: 
     ```bash
     python 04_generate-dataset-Dexterous_vacuum.py
     python 05_generate-point_cloud.py
