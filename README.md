@@ -115,23 +115,32 @@
 3. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFniMQyjCUnpmy9w?e=NUjMNd) to download our 3D mesh.
 
 ## Train a neural network
+1. Here we provide a neural network training demo based on a mini dataset, please dowload the mini dataset [here](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1).
 
+2. Unzip the mini dataset and copy them into the path `$HOME/Dexterous_grasp/dataset`.  
+    <img src="tutorials_imgs/dataset_example.png" width="50%" alt="dataset">  
+    
+3. Launch the visualization webpage:
+    ```bash
+    cd $HOME/Dexterous_grasp/NeuralNetwork/data
+    python -m visdom.server -port 8031 -env_path ~/Dexterous_grasp/NeuralNetwork/data
+    ```
+4. Open your web browser, and visit the webpage below to monitor the training progresslo:
+    ```bash
+    http://localhost:8031/
+    ```
+
+5. Start training:
+    ```bash
+    cd $HOME/Dexterous_grasp/NeuralNetwork/data
+    python train_DexVacuum_Linr_80.py
+    ```
+
+### Extra tips for grasp simulation
+
+1. This mini dataset is not large enough to train a robust network for real-world grasp.
+
+2. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1) to download our mini dataset.
 
 # Citation
 Will be available soon.
-
-https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1
-
-
-
-3D meshes: https://drive.google.com/file/d/1_GWzLP1bYUe6Ersm9kmDv4I3cEJIqTh-/view?usp=sharing 
-
-
-training dataset: 
-https://drive.google.com/file/d/1fJBxswzjU5H4lqjVxG3UMEkH3Qm9gaUu/view?usp=sharing
-
-
-back link: https://pan.baidu.com/s/1TE0AiBnN_gUpVO2zjXhiCA
-Extract code: abcd
-
-https://youtu.be/Sy3rW9zp_tk
