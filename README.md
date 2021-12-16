@@ -35,6 +35,7 @@
     
 6. Install the SDFGen from [GitHub](https://github.com/jeffmahler/SDFGen.git):
     ```bash
+    cd $HOME/Dexterous_grasp
     git clone https://github.com/jeffmahler/SDFGen.git
     cd SDFGen
     mkdir build
