@@ -8,15 +8,15 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="6.8499999in"
-   height="3.5in"
+   width="657.59998"
+   height="337"
    overflow="hidden"
    version="1.1"
-   id="svg390"
+   id="svg384"
    sodipodi:docname="01_flowchart_large.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <metadata
-     id="metadata394">
+     id="metadata388">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -36,18 +36,18 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="2100"
-     inkscape:window-height="1234"
-     id="namedview392"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview386"
      showgrid="false"
-     units="in"
-     inkscape:zoom="1.3332743"
-     inkscape:cx="151.99766"
-     inkscape:cy="311.8783"
+     units="px"
+     inkscape:zoom="8.3082977"
+     inkscape:cx="159.90472"
+     inkscape:cy="341.73175"
      inkscape:window-x="-9"
-     inkscape:window-y="39"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg390" />
+     inkscape:current-layer="svg384" />
   <defs
      id="defs136">
     <clipPath
@@ -482,8 +482,8 @@
   </defs>
   <g
      clip-path="url(#clip0)"
-     transform="matrix(0.29054867,0,0,0.29054867,-260.04106,-133.94294)"
-     id="g388">
+     transform="matrix(0.29097345,0,0,0.29097345,-260.42124,-134.13876)"
+     id="g382">
     <rect
        x="895"
        y="461"
@@ -608,11 +608,11 @@
        font-size="41px"
        transform="translate(1583.82,1419)"
        id="text180">Feedback<tspan
-   font-size="41"
+   font-size="41px"
    x="717.56299"
    y="92"
    id="tspan176">Quality map</tspan><tspan
-   font-size="41"
+   font-size="41px"
    x="219.58099"
    y="-425"
    id="tspan178">Point cloud</tspan></text>
@@ -632,7 +632,7 @@
        font-size="46px"
        transform="translate(2855.92,1132)"
        id="text186">GA<tspan
-   font-size="46"
+   font-size="46px"
    x="55"
    y="0"
    id="tspan184">-</tspan>CNN</text>
@@ -686,53 +686,40 @@
        font-weight="400"
        font-size="41px"
        transform="translate(1755.6,1513)"
-       id="text216">Optimized grasp<tspan
-   font-style="italic"
+       id="text210">Optimized grasp<tspan
    font-size="41px"
-   x="833.06897"
-   y="-425"
-   id="tspan204">Z</tspan><tspan
-   font-size="41"
-   x="852.54797"
-   y="-425"
-   id="tspan206">-</tspan><tspan
-   font-size="41"
-   x="865.15198"
-   y="-425"
-   id="tspan208">channel</tspan><tspan
-   font-size="41"
    x="320.03"
    y="-464"
-   id="tspan210">Random</tspan><tspan
-   font-size="41"
+   id="tspan204">Random</tspan><tspan
+   font-size="41px"
    x="314.599"
    y="-415"
-   id="tspan212">sampling</tspan><tspan
-   font-size="41"
+   id="tspan206">sampling</tspan><tspan
+   font-size="41px"
    x="509.146"
    y="-516"
-   id="tspan214">Sub point clouds</tspan></text>
+   id="tspan208">Sub point clouds</tspan></text>
     <path
        d="m 2531.5,1109.06 h 258.05 v 6.88 H 2531.5 Z m 253.47,-10.31 27.5,13.75 -27.5,13.75 z"
-       id="path218" />
+       id="path212" />
     <path
        d="M 4.82835e-6,-3.4375 234.017,-3.43717 v 6.875 L -4.82835e-6,3.4375 Z M 229.434,-13.7497 256.934,3.60892e-4 229.434,13.7503 Z"
        transform="matrix(-1,0,0,1,2282.43,1361.5)"
-       id="path220" />
+       id="path214" />
     <g
        clip-path="url(#clip1)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,2807,1286)"
-       id="g226">
+       id="g220">
       <g
          clip-path="url(#clip3)"
          transform="matrix(1.13674,0,0,1,-0.11792,0.141113)"
-         id="g224">
+         id="g218">
         <use
            width="100%"
            height="100%"
            xlink:href="#img2"
            transform="scale(2418.25)"
-           id="use222"
+           id="use216"
            x="0"
            y="0" />
       </g>
@@ -742,31 +729,31 @@
        font-weight="400"
        font-size="41px"
        transform="translate(1616.69,1331)"
-       id="text228">Pose</text>
+       id="text222">Pose</text>
     <path
        d="m 2804.58,1360.61 -250.17,-0.62 0.02,-6.87 250.16,0.62 z m -245.61,9.71 -27.47,-13.82 27.53,-13.68 z"
-       id="path230" />
+       id="path224" />
     <path
        d="M 5.33958e-6,-3.4375 209.418,-3.43717 v 6.875 L -5.33958e-6,3.4375 Z M 204.834,-13.7497 232.334,3.60892e-4 204.834,13.7503 Z"
        transform="matrix(-1,0,0,1,1770.83,1361.5)"
-       id="path232" />
+       id="path226" />
     <path
        d="m 1540.5,1113.06 h 206.49 v 6.88 H 1540.5 Z m 201.91,-10.31 27.5,13.75 -27.5,13.75 z"
-       id="path234" />
+       id="path228" />
     <g
        clip-path="url(#clip4)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,2405,499)"
-       id="g240">
+       id="g234">
       <g
          clip-path="url(#clip6)"
          transform="matrix(1.00409,0,0,1,-142108,-50755.6)"
-         id="g238">
+         id="g232">
         <use
            width="100%"
            height="100%"
            xlink:href="#img5"
            transform="scale(1792.16)"
-           id="use236"
+           id="use230"
            x="0"
            y="0" />
       </g>
@@ -774,17 +761,17 @@
     <g
        clip-path="url(#clip7)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,2678,499)"
-       id="g246">
+       id="g240">
       <g
          clip-path="url(#clip9)"
          transform="matrix(1,0,0,1.00004,-253785,-60970.1)"
-         id="g244">
+         id="g238">
         <use
            width="100%"
            height="100%"
            xlink:href="#img8"
            transform="scale(1954.39)"
-           id="use242"
+           id="use236"
            x="0"
            y="0" />
       </g>
@@ -792,17 +779,17 @@
     <g
        clip-path="url(#clip10)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,1578,499)"
-       id="g252">
+       id="g246">
       <g
          clip-path="url(#clip12)"
          transform="matrix(1.02094,0,0,1,-410730,-351283)"
-         id="g250">
+         id="g244">
         <use
            width="100%"
            height="100%"
            xlink:href="#img11"
            transform="scale(1623.12)"
-           id="use248"
+           id="use242"
            x="0"
            y="0" />
       </g>
@@ -813,79 +800,79 @@
        font-weight="400"
        font-size="48px"
        transform="translate(938.123,876)"
-       id="text258">Grasp simulation<tspan
-   font-size="48"
+       id="text252">Grasp simulation<tspan
+   font-size="48px"
    x="1677.89"
    y="709"
-   id="tspan254">Grasp quality prediction</tspan><tspan
-   font-size="48"
+   id="tspan248">Grasp quality prediction</tspan><tspan
+   font-size="48px"
    x="-7.2119198"
    y="709"
-   id="tspan256">Grasp execution</tspan></text>
+   id="tspan250">Grasp execution</tspan></text>
     <path
        d="m 1987.5,697.5 c 0,-7.18 5.82,-13 13,-13 7.18,0 13,5.82 13,13 0,7.18 -5.82,13 -13,13 -7.18,0 -13,-5.82 -13,-13 z"
        stroke="#000000"
        stroke-width="4.58333"
        stroke-miterlimit="8"
        fill-rule="evenodd"
-       id="path260" />
+       id="path254" />
     <path
        d="m 2042.5,697.5 c 0,-7.18 5.82,-13 13,-13 7.18,0 13,5.82 13,13 0,7.18 -5.82,13 -13,13 -7.18,0 -13,-5.82 -13,-13 z"
        stroke="#000000"
        stroke-width="4.58333"
        stroke-miterlimit="8"
        fill-rule="evenodd"
-       id="path262" />
+       id="path256" />
     <path
        d="m 2097.5,697.5 c 0,-7.18 5.82,-13 13,-13 7.18,0 13,5.82 13,13 0,7.18 -5.82,13 -13,13 -7.18,0 -13,-5.82 -13,-13 z"
        stroke="#000000"
        stroke-width="4.58333"
        stroke-miterlimit="8"
        fill-rule="evenodd"
-       id="path264" />
+       id="path258" />
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-weight="400"
        font-size="41px"
        transform="translate(2685.91,900)"
-       id="text272">Training<tspan
-   font-size="41"
+       id="text266">Training<tspan
+   font-size="41px"
    x="-141.726"
    y="-115"
-   id="tspan266">Virtual grasps</tspan><tspan
-   font-size="41"
+   id="tspan260">Virtual grasps</tspan><tspan
+   font-size="41px"
    x="-1063.03"
    y="-113"
-   id="tspan268">3D models</tspan><tspan
-   font-size="41"
+   id="tspan262">3D models</tspan><tspan
+   font-size="41px"
    x="-1719.41"
    y="-115"
-   id="tspan270">Virtual gripper</tspan></text>
+   id="tspan264">Virtual gripper</tspan></text>
     <path
        d="M 0,-3.4375 H 123.309 V 273.927 l -3.437,-3.438 h 96.955 v 6.875 H 116.434 V 0 l 3.438,3.4375 H 0 Z m 212.243,263.6145 27.5,13.75 -27.5,13.75 z"
        transform="matrix(0,1,1,0,2658.5,813.5)"
-       id="path274" />
+       id="path268" />
     <path
        d="m 1230.29,612.258 h 35.47 v -35.84 h 5.48 v 35.84 h 35.47 v 5.484 h -35.47 v 35.84 h -5.48 v -35.84 h -35.47 z"
        stroke="#0d0d0d"
        stroke-width="4.58333"
        stroke-miterlimit="8"
        fill-rule="evenodd"
-       id="path276" />
+       id="path270" />
     <g
        clip-path="url(#clip13)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,976,501)"
-       id="g282">
+       id="g276">
       <g
          clip-path="url(#clip15)"
          transform="matrix(1.01333,0,0,1,-506857,-311464)"
-         id="g280">
+         id="g274">
         <use
            width="100%"
            height="100%"
            xlink:href="#img14"
            transform="scale(1642.56)"
-           id="use278"
+           id="use272"
            x="0"
            y="0" />
       </g>
@@ -893,17 +880,17 @@
     <g
        clip-path="url(#clip16)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,2035,501)"
-       id="g288">
+       id="g282">
       <g
          clip-path="url(#clip18)"
          transform="matrix(1,0,0,1.15498,-222155,-184622)"
-         id="g286">
+         id="g280">
         <use
            width="100%"
            height="100%"
            xlink:href="#img17"
            transform="scale(1721.88)"
-           id="use284"
+           id="use278"
            x="0"
            y="0" />
       </g>
@@ -911,17 +898,17 @@
     <g
        clip-path="url(#clip19)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,1336,501)"
-       id="g294">
+       id="g288">
       <g
          clip-path="url(#clip21)"
          transform="matrix(1.03113,0,0,1,-441366,-302047)"
-         id="g292">
+         id="g286">
         <use
            width="100%"
            height="100%"
            xlink:href="#img20"
            transform="scale(1464.64)"
-           id="use290"
+           id="use284"
            x="0"
            y="0" />
       </g>
@@ -929,17 +916,17 @@
     <g
        clip-path="url(#clip22)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,1898,502)"
-       id="g300">
+       id="g294">
       <g
          clip-path="url(#clip24)"
          transform="matrix(1,0,0,1.1347,-248619,-196891)"
-         id="g298">
+         id="g292">
         <use
            width="100%"
            height="100%"
            xlink:href="#img23"
            transform="scale(1731.26)"
-           id="use296"
+           id="use290"
            x="0"
            y="0" />
       </g>
@@ -950,41 +937,41 @@
        stroke-width="4.58333"
        stroke-miterlimit="8"
        fill-rule="evenodd"
-       id="path302" />
+       id="path296" />
     <path
        d="m 2999.5,612 c 0,-7.456 5.6,-13.5 12.5,-13.5 6.9,0 12.5,6.044 12.5,13.5 0,7.456 -5.6,13.5 -12.5,13.5 -6.9,0 -12.5,-6.044 -12.5,-13.5 z"
        stroke="#000000"
        stroke-width="4.58333"
        stroke-miterlimit="8"
        fill-rule="evenodd"
-       id="path304" />
+       id="path298" />
     <path
        d="m 3054.5,612 c 0,-7.456 5.82,-13.5 13,-13.5 7.18,0 13,6.044 13,13.5 0,7.456 -5.82,13.5 -13,13.5 -7.18,0 -13,-6.044 -13,-13.5 z"
        stroke="#000000"
        stroke-width="4.58333"
        stroke-miterlimit="8"
        fill-rule="evenodd"
-       id="path306" />
+       id="path300" />
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-weight="400"
        font-size="41px"
        transform="translate(2885.22,1483)"
-       id="text308">Filter</text>
+       id="text302">Filter</text>
     <g
        clip-path="url(#clip25)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,1775,1013)"
-       id="g314">
+       id="g308">
       <g
          clip-path="url(#clip27)"
          transform="matrix(1,0,0,1.00081,-872676,-669503)"
-         id="g312">
+         id="g306">
         <use
            width="100%"
            height="100%"
            xlink:href="#img26"
            transform="scale(4020.56)"
-           id="use310"
+           id="use304"
            x="0"
            y="0" />
       </g>
@@ -992,17 +979,17 @@
     <g
        clip-path="url(#clip28)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,2283,1013)"
-       id="g320">
+       id="g314">
       <g
          clip-path="url(#clip29)"
          transform="matrix(1.00242,0,0,1,-1176270,-787270)"
-         id="g318">
+         id="g312">
         <use
            width="100%"
            height="100%"
            xlink:href="#img26"
            transform="scale(4665.6)"
-           id="use316"
+           id="use310"
            x="0"
            y="0" />
       </g>
@@ -1010,17 +997,17 @@
     <g
        clip-path="url(#clip30)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,2284,1086)"
-       id="g326">
+       id="g320">
       <g
          clip-path="url(#clip31)"
          transform="matrix(1.01832,0,0,1,-1194940,-787274)"
-         id="g324">
+         id="g318">
         <use
            width="100%"
            height="100%"
            xlink:href="#img26"
            transform="scale(4665.62)"
-           id="use322"
+           id="use316"
            x="0"
            y="0" />
       </g>
@@ -1028,10 +1015,28 @@
     <g
        clip-path="url(#clip32)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,2284,1158)"
-       id="g332">
+       id="g326">
       <g
          clip-path="url(#clip33)"
          transform="matrix(1.01833,0,0,1,-1451080,-914319)"
+         id="g324">
+        <use
+           width="100%"
+           height="100%"
+           xlink:href="#img26"
+           transform="scale(4665.6)"
+           id="use322"
+           x="0"
+           y="0" />
+      </g>
+    </g>
+    <g
+       clip-path="url(#clip34)"
+       transform="matrix(3.60892e-4,0,0,3.60892e-4,2371,1012)"
+       id="g332">
+      <g
+         clip-path="url(#clip35)"
+         transform="matrix(1.00242,0,0,1,-1235310,-777041)"
          id="g330">
         <use
            width="100%"
@@ -1044,37 +1049,19 @@
       </g>
     </g>
     <g
-       clip-path="url(#clip34)"
-       transform="matrix(3.60892e-4,0,0,3.60892e-4,2371,1012)"
+       clip-path="url(#clip36)"
+       transform="matrix(3.60892e-4,0,0,3.60892e-4,2372,1086)"
        id="g338">
       <g
-         clip-path="url(#clip35)"
-         transform="matrix(1.00242,0,0,1,-1235310,-777041)"
+         clip-path="url(#clip37)"
+         transform="matrix(1.00241,0,0,1,-1421420,-1191230)"
          id="g336">
         <use
            width="100%"
            height="100%"
            xlink:href="#img26"
-           transform="scale(4665.6)"
-           id="use334"
-           x="0"
-           y="0" />
-      </g>
-    </g>
-    <g
-       clip-path="url(#clip36)"
-       transform="matrix(3.60892e-4,0,0,3.60892e-4,2372,1086)"
-       id="g344">
-      <g
-         clip-path="url(#clip37)"
-         transform="matrix(1.00241,0,0,1,-1421420,-1191230)"
-         id="g342">
-        <use
-           width="100%"
-           height="100%"
-           xlink:href="#img26"
            transform="scale(4665.62)"
-           id="use340"
+           id="use334"
            x="0"
            y="0" />
       </g>
@@ -1082,10 +1069,28 @@
     <g
        clip-path="url(#clip38)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,2372,1158)"
-       id="g350">
+       id="g344">
       <g
          clip-path="url(#clip39)"
          transform="matrix(1.00242,0,0,1,-1316320,-938105)"
+         id="g342">
+        <use
+           width="100%"
+           height="100%"
+           xlink:href="#img26"
+           transform="scale(4665.6)"
+           id="use340"
+           x="0"
+           y="0" />
+      </g>
+    </g>
+    <g
+       clip-path="url(#clip40)"
+       transform="matrix(3.60892e-4,0,0,3.60892e-4,2459,1012)"
+       id="g350">
+      <g
+         clip-path="url(#clip41)"
+         transform="matrix(1.01833,0,0,1,-1315770,-881684)"
          id="g348">
         <use
            width="100%"
@@ -1098,37 +1103,19 @@
       </g>
     </g>
     <g
-       clip-path="url(#clip40)"
-       transform="matrix(3.60892e-4,0,0,3.60892e-4,2459,1012)"
+       clip-path="url(#clip42)"
+       transform="matrix(3.60892e-4,0,0,3.60892e-4,2461,1086)"
        id="g356">
       <g
-         clip-path="url(#clip41)"
-         transform="matrix(1.01833,0,0,1,-1315770,-881684)"
+         clip-path="url(#clip43)"
+         transform="matrix(1.00241,0,0,1,-1194860,-966443)"
          id="g354">
         <use
            width="100%"
            height="100%"
            xlink:href="#img26"
-           transform="scale(4665.6)"
-           id="use352"
-           x="0"
-           y="0" />
-      </g>
-    </g>
-    <g
-       clip-path="url(#clip42)"
-       transform="matrix(3.60892e-4,0,0,3.60892e-4,2461,1086)"
-       id="g362">
-      <g
-         clip-path="url(#clip43)"
-         transform="matrix(1.00241,0,0,1,-1194860,-966443)"
-         id="g360">
-        <use
-           width="100%"
-           height="100%"
-           xlink:href="#img26"
            transform="scale(4665.62)"
-           id="use358"
+           id="use352"
            x="0"
            y="0" />
       </g>
@@ -1138,21 +1125,21 @@
        font-weight="400"
        font-size="83px"
        transform="translate(2463.39,1199)"
-       id="text364">…</text>
+       id="text358">…</text>
     <g
        clip-path="url(#clip44)"
        transform="matrix(0,3.60892e-4,-3.60892e-4,0,2531,1251)"
-       id="g370">
+       id="g364">
       <g
          clip-path="url(#clip46)"
          transform="matrix(1.00027,0,0,1,-1541110,-812557)"
-         id="g368">
+         id="g362">
         <use
            width="100%"
            height="100%"
            xlink:href="#img45"
            transform="scale(3682.45)"
-           id="use366"
+           id="use360"
            x="0"
            y="0" />
       </g>
@@ -1160,17 +1147,17 @@
     <g
        clip-path="url(#clip47)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,1778,1254)"
-       id="g376">
+       id="g370">
       <g
          clip-path="url(#clip48)"
          transform="matrix(1.00397,0,0,1,-872676,-666314)"
-         id="g374">
+         id="g368">
         <use
            width="100%"
            height="100%"
            xlink:href="#img26"
            transform="scale(4004.66)"
-           id="use372"
+           id="use366"
            x="0"
            y="0" />
       </g>
@@ -1182,21 +1169,21 @@
        stroke-miterlimit="8"
        fill="#ffff00"
        fill-rule="evenodd"
-       id="path378" />
+       id="path372" />
     <g
        clip-path="url(#clip49)"
        transform="matrix(3.60892e-4,0,0,3.60892e-4,943,934)"
-       id="g384">
+       id="g378">
       <g
          clip-path="url(#clip51)"
          transform="matrix(1,0,0,1.01916,-705015,-113707)"
-         id="g382">
+         id="g376">
         <use
            width="100%"
            height="100%"
            xlink:href="#img50"
            transform="scale(1851.64)"
-           id="use380"
+           id="use374"
            x="0"
            y="0" />
       </g>
@@ -1207,6 +1194,6 @@
        stroke-width="4.58333"
        stroke-miterlimit="8"
        fill-rule="evenodd"
-       id="path386" />
+       id="path380" />
   </g>
 </svg>
