@@ -133,7 +133,7 @@
 
 ### Extra tips for grasp simulation
 
-1. This mini dataset is not large enough to train a robust network for real-world grasp.
+1. The mini dataset is not large enough to train a robust network for real-world grasp, and this demo only shows you how to configure the repository for neural network training.
 
 2. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1) to download our mini dataset.
 
