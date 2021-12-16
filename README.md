@@ -46,15 +46,17 @@
     ```  
     
 7. Install the python-pcl package:
-    For Ubuntu 16, the python-pcl package can be installed by the command ```pip install python-pcl``` or  by the soruce package (refer the tutorial in the repository [PointNetGPD](https://github.com/BerkeleyAutomation/meshpy)) under virtual Python environment. However, ```pip install python-pcl``` is not available for Ubuntu 20.0. Here we can use another method:
+    For Ubuntu 16, the python-pcl package can be installed by the command ```pip install python-pcl``` or  by the source package (refer the tutorial in the repository [PointNetGPD](https://github.com/BerkeleyAutomation/meshpy)) under virtual Python environment. However, ```pip install python-pcl``` is not available for Ubuntu 20.0, and the source package can not be compiled successfully on every PC with Ubuntu 20.0. If you are failed to install the python-pcl in your virtual environment, here we provide another method:
     ```
     sudo add-apt-repository ppa:sweptlaser/python3-pcl
     sudo apt update
     sudo apt install python3-pcl
     ```
-    Then copy the 
-    
-    
+    Then copy the python-pcl package to your virtual environment, for example:
+    ```
+    copy the folder from /usr/lib/python3/dist-packages/pcl to the path $HOME/venv_3.8/lib/python3.8/site-packages/pcl
+    ```
+    Note: this method cannot make sure all pcl functions run well in the virtual environment (e.g.: pcl visualization), but we can make sure the functions used in our repository can be used.
     
 7. Install the grasp simulator:   
     ```bash
@@ -63,6 +65,9 @@
     ```
 
 ## Simulation and visualization
+
+
+
 
 
 ## Train a neural network
