@@ -111,7 +111,7 @@
 3. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFniMQyjCUnpmy9w?e=NUjMNd) to download our 3D mesh.
 
 ## Train a neural network
-1. Here we provide a neural network training demo based on a mini dataset. Please download the mini dataset [here](https://drive.google.com/file/d/1fJBxswzjU5H4lqjVxG3UMEkH3Qm9gaUu/view?usp=sharing).
+1. Here we provide a brief training demo based on a mini dataset. Please download the mini dataset [here](https://drive.google.com/file/d/1fJBxswzjU5H4lqjVxG3UMEkH3Qm9gaUu/view?usp=sharing).
 
 2. Unzip the mini dataset and copy them into the path `$HOME/Dexterous_grasp/dataset`.  
     <img src="tutorials_imgs/dataset_example.png" width="50%" alt="dataset">  
@@ -134,9 +134,7 @@
 
 ### Extra tips for grasp simulation
 
-1. The mini dataset is not large enough to train a robust network for real-world grasp, and this demo only shows you how to configure the repository for neural network training.
-
-2. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1) to download our mini dataset.
+1. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1) to download our mini dataset.
 
 # Citation
 Will be available soon.
