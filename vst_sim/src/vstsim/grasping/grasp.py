@@ -23,6 +23,10 @@
 # Grasp class that implements gripper endpoints and grasp functions
 # Authors: Jeff Mahler, with contributions from Jacky Liang and Nikhil Sharma
 # """
+# Modified by   : Hui Zhang
+# email         : hui.zhang@kuleuven.be
+# """
+
 from abc import ABCMeta, abstractmethod
 from copy import deepcopy
 import IPython
