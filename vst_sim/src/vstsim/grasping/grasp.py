@@ -1269,41 +1269,7 @@ class VacuumPoint(Grasp):
             _friction_cone - numpy NUM_STEPSxNUM_STEPS array of distances from tangent
                 plane to obj, False if surface window can't be computed
         """
-        num_cone_faces = np.shape(cone_info)[0] - 1
-        _friction_cone = np.zeros((3, num_cone_faces))
-        # check whether contact would slip, which is whether or not the tangent force is always
-        # greater than the frictional force
-        surf_avg_norm = np.mean(window_info, axis=0)[3:]
-        surf_in_norm = -surf_avg_norm / np.linalg.norm(surf_avg_norm)
-        ''''''
-        normal_force_mag = 1.
-        normal_force_mag = max(np.dot(direction, surf_in_norm), 0.)
-        #print(direction, surf_in_norm, normal_force_mag)
-        #print(direction[0]*surf_in_norm[0] + direction[1]*surf_in_norm[1] + direction[2]*surf_in_norm[2])
-        #print(np.shape(direction), np.shape(surf_in_norm))
-        #input()
-        _, t1, t2 = VacuumPoint.tangents(direction=surf_in_norm)
-
-        tan_force_x = np.dot(direction, t1)
-        tan_force_y = np.dot(direction, t2)
-        tan_force_mag = np.sqrt(tan_force_x ** 2 + tan_force_y ** 2)
-        friction_force_mag = friction_coef * normal_force_mag
-        '''
-        if friction_force_mag < tan_force_mag:
-            logging.warning('Contact would slip')
-            return False, _friction_cone
-        '''
-        # set up friction cone
-        force = direction
-
-        # find convex combinations of tangent vectors
-        for j in range(num_cone_faces):
-            tan_vec = t1 * np.cos(2 * np.pi * (float(j) / num_cone_faces)) + t2 * np.sin(
-                2 * np.pi * (float(j) / num_cone_faces))
-            normal_force_mag = max(np.dot(direction, -cone_info[j, 3:]), 0.)
-            _friction_cone[:, j] = force + normal_force_mag * friction_coef * tan_vec*10.
-            #_friction_cone[:, j] = force + friction_coef * tan_vec
-        return True, _friction_cone
+        pass
 
     @staticmethod
     def tangents(direction, align_axes=True, max_samples=1000):
@@ -1382,19 +1348,7 @@ class VacuumPoint(Grasp):
         torques : 3xN :obj:`numpy.ndarray`
             the torques that can be applied by given forces at the contact
         """
-        as_grid = contact_pt.graspable.sdf.transform_pt_obj_to_grid(contact_pt.point)
-        on_surface, _ = contact_pt.graspable.sdf.on_surface(as_grid)
-        if not on_surface:
-            logging.debug('Contact point not on surface')
-            return False, None
-
-        num_forces = forces.shape[1]
-        torques = np.zeros([3, num_forces])
-        moment_arm = contact_pt.graspable.moment_arm(contact_pt.point)
-        for i in range(num_forces):
-            torques[:, i] = np.cross(moment_arm, forces[:, i])
-
-        return True, torques
+        pass
 
     @staticmethod
     def transfer_vector_to_newXYZ(vector, axis_z=None, axis_x=None, axis_y=None):
@@ -1504,11 +1458,7 @@ class VacuumPoint(Grasp):
         -------
 
         """
-        min_norm, wrenchs = VacuumPoint.min_norm_vector_in_facet(facet=grasp_matrix,
-                                                                 offset=stable_wrench,
-                                                                 differ=differ,
-                                                                 wrench_regularizer=wrench_regularizer)
-        return min_norm, wrenchs
+        pass
 
     @staticmethod
     def min_norm_vector_in_facet(facet,
@@ -1530,228 +1480,10 @@ class VacuumPoint(Grasp):
         Nx1 :obj:`numpy.ndarray`
             vector of coefficients that achieves the minimum
         """
-        [dof, dim] = facet.shape
-
-        # create alpha weights for vertices of facet
-        G = facet.T.dot(facet)
-        grasp_matrix = G + wrench_regularizer * np.eye(G.shape[0])
-
-        # Solve QP to minimize .5 x'Px + q'x subject to Gx <= h
-        P = cvx.matrix(2 * grasp_matrix, tc='d')  # quadratic cost for Euclidean dist
-        q = cvx.matrix(np.dot(facet.T,offset), tc='d')
-        #G = cvx.matrix(-np.eye(dim))  # greater than zero constraint
-        #h = cvx.matrix(np.zeros((dim, 1)))
-
-        tmp_matrix = np.copy(facet)
-        #tmp_matrix[2, :] = -1* tmp_matrix[2, :]
-        #print(np.shape(tmp_matrix))
-        #input()
-        '''
-        condition_1 = np.c_[tmp_matrix, np.zeros([dof,dim]), np.zeros([dof,dim])]
-        tmp_matrix[2, :] = np.zeros([1, dim])
-        condition_2 = np.c_[np.zeros([dof,dim]), -tmp_matrix, np.zeros([dof,dim])]
-        condition_3 = np.c_[np.zeros([dim,dim]), np.zeros([dim,dim]), -np.eye(dim)]
-        '''
-        condition_1 = np.copy(tmp_matrix)
-        #tmp_matrix[2, :] = np.zeros([1, dim])
-        condition_2 = -tmp_matrix
-        #condition_3 = -np.eye(dim)
-        condition_4 = -np.eye(dim)
-        condition_5 = np.eye(dim)
-        G = cvx.matrix(np.r_[condition_1, condition_2, condition_4, condition_5], tc='d')
-        #G = cvx.matrix(condition_4)
-
-        max_fx = fric_coef * max_force / (3. ** 0.5) #
-        max_fy = max_fx
-        max_fz = 9. * max_force
-        #max_tx = np.pi * radius * elastic_limit / (2. ** 0.5)
-        #max_ty = np.pi * radius * elastic_limit / (2. ** 0.5)
-        #max_tz = radius * fric_coef / max_force / (3. ** 0.5)
-        max_tx = 1.
-        max_ty = 1.
-        max_tz = 1.
-        constraint_1 = np.array([max_fx, max_fy, max_fz, max_tx, max_ty, max_tz]).reshape(6, 1)
-        constraint_2 = np.array([max_fx, max_fy, 0., max_tx, max_ty, max_tz]).reshape(6, 1)
-        #constraint_3 = np.zeros([dim, 1])
-        avg_weight = 1./dim
-        min_weight = avg_weight * (1. - differ)
-        max_weight = avg_weight * (1. + differ)
-        constraint_4 = np.array(min_weight * np.ones([dim, 1])).reshape(dim, 1)
-        constraint_5 = np.array(max_weight * np.ones([dim, 1])).reshape(dim, 1)
-        h = cvx.matrix(np.r_[constraint_1, constraint_2, constraint_4, constraint_5], tc='d')
-        #h = cvx.matrix(constraint_4)
-        #print(np.shape(h))
-        #input()
-
-        A = cvx.matrix(np.ones((1, dim)), tc='d')  # sum constraint to enforce convex
-        b = cvx.matrix(np.ones(1), tc='d')  # combinations of vertices
-        sol = cvx.solvers.qp(P, q, G, h, A, b)
-        v = np.array(sol['x'])
-        min_norm = np.sqrt(sol['primal objective'])
-
-        return abs(min_norm), v
+        pass
 
 class GraspQuality_Vacuum():
-
-    def __init__(self, grasp_matrix=None, stable_wrench=None,
-                 fric_coef=0.5, elastic_limit=0.005, radius=0.015, max_force=250,
-                 differ=0.2, wrench_regularizer=1e-10):
-        self.grasp_matrix_ = grasp_matrix
-        self.stable_wrench_ = stable_wrench
-        self.fric_coef_ = fric_coef
-        self.elastic_limit_ = elastic_limit
-        self.radius_ = radius
-        self.max_force_ = max_force
-        self.differ_ = differ
-        self.wrench_regularizer_ = wrench_regularizer
-        [dof, dim] = np.shape(grasp_matrix)
-        start_params = 1.0 / dim
-        self.start_wrench_ = np.array(start_params * np.ones([dim, 1])).reshape(dim, 1)
-
-    def set_grasp_matrix(self, input):
-        self.grasp_matrix_ = input
-    def set_stable_wrench(self, input):
-        self.stable_wrench_ = input
-    def set_fric_coef(self, input):
-        self.fric_coef_ = input
-    def set_elastic_limit(self, input):
-        self.elastic_limit_ = input
-    def set_radius(self, input):
-        self.radius_ = input
-    def set_max_force(self, input):
-        self.max_force_ = input
-    def set_differ(self, input):
-        self.differ_ = input
-    def set_wrench_regularizer(self, input):
-        self.wrench_regularizer_ = input
-
-    @property
-    def grasp_matrix(self):
-        return self.grasp_matrix_
-    @property
-    def stable_wrench(self):
-        return self.stable_wrench_
-    @property
-    def fric_coef(self):
-        return self.fric_coef_
-    @property
-    def elastic_limit(self):
-        return self.elastic_limit_
-    @property
-    def radius(self):
-        return self.radius_
-    @property
-    def max_force(self):
-        return self.max_force_
-    @property
-    def differ(self):
-        return self.differ_
-    @property
-    def wrench_regularizer(self):
-        return self.wrench_regularizer_
-
-    def objective(self, w):
-        # Solve QP to minimize .5 x'Px + q'x subject to Gx <= h
-        facet = self.grasp_matrix[:3,:]
-        offset = (self.stable_wrench)[:3]
-        dives = facet.dot(w) - offset
-        dis = np.linalg.norm(dives) ** 2
-        return dis
-
-    def ineq_constraint_min_0(self, w):
-        cond = (self.grasp_matrix)[0,:]
-        min_fx = -self.fric_coef * self.max_force / (3. ** 0.5) #
-        return np.linalg.norm(cond.dot(w) - min_fx)
-    def ineq_constraint_min_1(self, w):
-        cond = (self.grasp_matrix)[1,:]
-        min_fy = -self.fric_coef * self.max_force / (3. ** 0.5)  #
-        return np.linalg.norm(cond.dot(w) - min_fy)
-    def ineq_constraint_min_2(self, w):
-        cond = (self.grasp_matrix)[2,:]
-        min_fz = 1.
-        return np.linalg.norm(cond.dot(w) - min_fz)
-    def ineq_constraint_max_0(self, w):
-        cond = (self.grasp_matrix)[0,:]
-        max_fx = self.fric_coef * self.max_force / (3. ** 0.5) #
-        return np.linalg.norm(max_fx - cond.dot(w))
-    def ineq_constraint_max_1(self, w):
-        cond = (self.grasp_matrix)[1,:]
-        max_fy = self.fric_coef * self.max_force / (3. ** 0.5)  #
-        return np.linalg.norm(max_fy - cond.dot(w))
-    def ineq_constraint_max_2(self, w):
-        cond = (self.grasp_matrix)[2,:]
-        max_fz = 0.7067647816774781
-        out = lambda w: np.linalg.norm(cond.dot(w)- max_fz)
-        return out
-        #return np.linalg.norm(cond.dot(w)-max_fz)
-
-    def eq_constraint_1(self, w):
-        eq = 2.0
-        for i in range(0, np.size(w)):
-            eq = eq - w[i]
-        return eq
-
-    def evaluation_qp(self):
-        avg_weight = 1.0 / np.shape(self.grasp_matrix)[1]
-        b = [avg_weight * (1.-self.differ), avg_weight * (1.+self.differ)]
-        bs = [b, b, b, b, b, b, b, b]
-        con1 = {'type': 'ineq', 'fun': self.ineq_constraint_min_0}
-        con2 = {'type': 'ineq', 'fun': self.ineq_constraint_min_1}
-        con3 = {'type': 'ineq', 'fun': self.ineq_constraint_min_2}
-        con4 = {'type': 'ineq', 'fun': self.ineq_constraint_max_0}
-        con5 = {'type': 'ineq', 'fun': self.ineq_constraint_max_1}
-        con6 = {'type': 'ineq', 'fun': self.ineq_constraint_max_2}
-        con7 = {'type': 'eq', 'fun': self.eq_constraint_1}
-        #cons = [ con3, con6, con7]
-        #cons = [ con7]
-        cond = (self.grasp_matrix)[2, :]
-        max_fx = self.fric_coef * self.max_force / (3. ** 0.5)
-        max_fy = self.fric_coef * self.max_force / (3. ** 0.5)
-
-        ''''''
-        cons = ({'type': 'ineq', 'fun': lambda w: (-self.grasp_matrix)[0, :].dot(w) + max_fx}, \
-                {'type': 'ineq', 'fun': lambda w: (self.grasp_matrix)[0, :].dot(w) - max_fx}, \
-                {'type': 'ineq', 'fun': lambda w: (-self.grasp_matrix)[1, :].dot(w) + max_fy}, \
-                {'type': 'ineq', 'fun': lambda w: (self.grasp_matrix)[1, :].dot(w) - max_fy}, \
-                {'type': 'ineq', 'fun': lambda w: (self.grasp_matrix)[2, :].dot(w) - 0.5}, \
-                {'type': 'ineq', 'fun': lambda w: -np.sum(w) + (1.-self.differ)},\
-                {'type': 'ineq', 'fun': lambda w: np.sum(w) - (1.+self.differ)})
-
-        sol = minimize(self.objective, self.start_wrench_, method='SLSQP', bounds=bs, constraints=cons)
-        #print(sol)
-        #print(self.objective(sol.x))
-        return sol
-
-    def analysis_quality(self):
-        sol = self.evaluation_qp()
-        max_fx = self.fric_coef * self.max_force / (3. ** 0.5)
-        max_fy = self.fric_coef * self.max_force / (3. ** 0.5)
-        min_fx = -self.fric_coef * self.max_force / (3. ** 0.5)
-        min_fy = -self.fric_coef * self.max_force / (3. ** 0.5)
-        min_fz = 0.5
-        max_sum = 1. + self.differ
-        min_sum = 1. - self.differ
-        extra_dis = 0.
-
-        cur_sum = np.sum(sol.x)
-        if cur_sum < min_sum:
-            extra_dis = extra_dis + 10 * np.absolute((cur_sum - min_sum) / (max_sum - min_sum))
-        elif cur_sum > max_sum:
-            extra_dis = extra_dis + 10 * np.absolute((cur_sum - max_sum) / (max_sum - min_sum))
-
-        cur_fx = self.grasp_matrix[0, :].dot(sol.x)
-        if cur_fx > max_fx:
-            extra_dis = extra_dis + 10 * np.absolute((cur_fx - max_fx) / (max_fx - min_fx))
-        elif cur_fx < min_fx:
-            extra_dis = extra_dis + 10 * np.absolute((cur_fx - min_fx) / (max_fx - min_fx))
-
-        cur_fy = self.grasp_matrix[1, :].dot(sol.x)
-        if cur_fy > max_fy:
-            extra_dis = extra_dis + 10 * np.absolute((cur_fy - max_fy) / (max_fy - min_fy))
-        elif cur_fy < min_fx:
-            extra_dis = extra_dis + 10 * np.absolute((cur_fy - min_fy) / (max_fy - min_fy))
-
-        return True, sol, sol.fun + extra_dis
+    pass
 
 
 class DexterousVacuumPoint(Grasp):
@@ -2157,6 +1889,7 @@ class DexterousVacuumPoint(Grasp):
         G_matrix = P_real * G_matrix
         return G_matrix[:, 1::], P_air, Area_force_max * P_air
 
+
 class DexterousQuality_Vacuum():
     def __init__(self, grasp_matrix=np.zeros([4, 1]), stable_wrench=None, max_force_vacuum=1.0,
                  coef_fric=0.5, radius_gripper=0.025, radius_vacuum=0.02,
@@ -2333,7 +2066,6 @@ class DexterousQuality_Vacuum():
         quality = np.exp(-1.0 * dist)
 
         return flg_in, lst_sol[ind_min], 1.0*dist, 1.0*quality
-
 
 
 class ChameleonTongueContact(Grasp):
