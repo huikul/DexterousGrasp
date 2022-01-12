@@ -2096,7 +2096,7 @@ class DexterousVacuumGrasp(GraspSampler):
         # only return the valid rows
         tmp_sum = np.sum(pt_map_project, axis=1)
         ind_zero = np.squeeze(np.argwhere(tmp_sum[:] == 0))
-        if len(ind_zero.shape) > 0:
+        if ind_zero.size > 0:
             ind_zero = ind_zero[ind_zero.argsort()]
             pt_map_project = pt_map_project[0:ind_zero[0], :]
             pts_project = pts_project[:, 0:ind_zero[0], :]
