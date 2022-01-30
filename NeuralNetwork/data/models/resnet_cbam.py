@@ -178,20 +178,16 @@ class ResNet(nn.Module):
     def forward(self, x):
         ''''''
         x = self.conv1(x)
-        if self.flg_drop:
-            x = self.drop_0(x)
 
         x = self.bn1(x)
         # x = self.relu(x)
 
         x = self.layer1(x)
-        '''        '''
-        if self.flg_drop:
-            x = self.drop_1(x)
-
         x = self.layer2(x)
         x = self.layer3(x)
         x = self.layer4(x)
+        if self.flg_drop:
+            x = self.drop_4(x)
         x = self.avgpool(x)
 
         x = x.view(x.size(0), -1)
@@ -274,7 +270,7 @@ def ResidualNet_Linr(network_type, input_channel, depth, att_type, flg_drop=Fals
 
 ''''''
 if __name__ == '__main__':
-    model = ResidualNet_Linr('ImageNet', 1, 80, 5, 'CBAM')
+    model = ResidualNet_Linr('ImageNet', 1, 50, 5, 'CBAM')
     model.eval()
     torch.set_grad_enabled(False)
     h_img = 24
