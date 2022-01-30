@@ -1,7 +1,7 @@
 # Introduction
 ## Abstract
 
-<img src="tutorials_imgs/introduction.png" width="100%" alt="abstract">
+<img src="tutorials_imgs/introduction_01.png" width="100%" alt="abstract">
 <img src="tutorials_imgs/01_flowchart_large.svg" width="100%" alt="flowchart">
 
 ## Extra explanation
