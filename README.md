@@ -9,8 +9,8 @@
 2) This repository has been tested on Ubuntu 16.0 (python 3.6) and Ubuntu 20.0 (python 3.8), and the following tutorial is based on Ubuntu 20.0 (python 3.8).
 
 # Video demo
-1. https://youtu.be/Sy3rW9zp_tk
-2. https://1drv.ms/v/s!Aok6lAYtb5vYzFuZliqSTU3sqO3o?e=UIQRfN
+1. https://youtu.be/LSdygY7ReJ8
+2. https://1drv.ms/v/s!Aok6lAYtb5vYzHm7LP-IX6gxdw68?e=Tv4Ykk
 
 # Tutorials
 ## Install and configuration
