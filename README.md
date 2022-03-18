@@ -1,5 +1,5 @@
 # Introduction
-**Please don't spread this repository online before our paper is accepted.**
+**Please don't spread this repository online before our paper is published.**
 
 ## Abstract
 
@@ -139,4 +139,4 @@
 1. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1) to download our mini dataset.
 
 # Citation
-**Will be available soon. Please don't spread this repository online before our paper is accepted.**
+**Will be available soon. Please don't spread this repository online before our paper is published.**
