@@ -135,7 +135,7 @@
     python train_DexVacuum_Linr_80.py
     ```
 
-### Extra tips for grasp simulation
+### Extra tips for neural network training
 
 1. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1) to download our mini dataset.
 
