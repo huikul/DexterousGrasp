@@ -1,5 +1,5 @@
 # Introduction
-**Please don't spread this repository before our paper is accepted**
+**Please don't spread this repository before our paper is accepted.**
 
 ## Abstract
 
