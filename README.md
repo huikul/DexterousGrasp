@@ -1,4 +1,6 @@
 # Introduction
+**Please don't spread this repository before our paper is accepted**
+
 ## Abstract
 
 <img src="tutorials_imgs/introduction_01.png" width="100%" alt="abstract">
@@ -137,4 +139,4 @@
 1. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1) to download our mini dataset.
 
 # Citation
-*Will be available soon. Please don't spread this repository before our paper is accepted.*
+**Will be available soon. Please don't spread this repository before our paper is accepted.**
