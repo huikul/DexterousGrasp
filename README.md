@@ -137,4 +137,4 @@
 1. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFpoUwuhR24el4xr?e=deWaV1) to download our mini dataset.
 
 # Citation
-Will be available soon. Please don't spread this repository before our paper is accepted. <br />
+*Will be available soon. Please don't spread this repository before our paper is accepted.*
