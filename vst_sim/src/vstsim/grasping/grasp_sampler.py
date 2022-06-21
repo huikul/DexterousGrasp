@@ -3188,6 +3188,7 @@ class DexterousVacuumGrasp(GraspSampler):
                     for i in range(1, dists.shape[0]):
                         if dists[i] > dists[i-1]:
                             if dists[i-1] < graspable.sdf.surface_thresh * 1.5:
+                                flg_contact = True
                                 break
                     if flg_contact:
                         output_pc[2, y, x] = 1.0 * pts_new_GCS[i-1, 2]
@@ -3225,14 +3226,14 @@ class DexterousVacuumGrasp(GraspSampler):
                 gripper_vertices = math_robot.transfer_CS_reverse(g_info.t1_grasp,
                                                           g_info.t2_grasp,
                                                           g_info.dir_grasp,
-                                                          100.0*g_info.pos_grasp,
+                                                          g_info.pos_grasp,
                                                           gripper_vertices)[:, 0:3]
 
                 gripper_normals = mesh_gripper.normals
                 gripper_normals = math_robot.transfer_CS_reverse(g_info.t1_grasp,
                                                           g_info.t2_grasp,
                                                           g_info.dir_grasp,
-                                                          100.0*g_info.pos_grasp,
+                                                          g_info.pos_grasp,
                                                           gripper_normals)[:, 0:3]
                 gripper_normals = gripper_normals / np.linalg.norm(gripper_normals, axis=1).\
                     reshape([gripper_normals.shape[0], 1])
