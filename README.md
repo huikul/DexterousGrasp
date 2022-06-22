@@ -103,15 +103,7 @@
     <img src="tutorials_imgs/05_grasp_simulations_sub_i.png" width="50%" alt="local_point_cloud">
 
 ### Extra tips for grasp simulation
-1. To generate a large-scale dataset, please adjust the parameters in the file `$HOME/Dexterous_grasp/vst_sim/data/grippers/dexterous_vacuum/params.json`, and make sure the variable `scale_size=1.0`
-
-2. Replace the Python scripts in `Step 4` and `Step 5`, and run the scripts one by one: 
-    ```bash
-    python 04_generate-dataset-Dexterous_vacuum.py
-    python 05_generate-point_cloud.py
-    ```
-
-3. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFniMQyjCUnpmy9w?e=NUjMNd) to download our 3D mesh.
+1. A backup [link](https://1drv.ms/u/s!Aok6lAYtb5vYzFniMQyjCUnpmy9w?e=NUjMNd) to download our 3D mesh.
 
 ## Train a neural network
 1. Here we provide a brief training demo based on a mini dataset. Please download the mini dataset [here](https://drive.google.com/file/d/1fJBxswzjU5H4lqjVxG3UMEkH3Qm9gaUu/view?usp=sharing).
