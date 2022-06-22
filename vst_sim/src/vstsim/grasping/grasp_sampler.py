@@ -2150,10 +2150,10 @@ class DexterousVacuumGrasp(GraspSampler):
         :flg_success:
         :new_grasps: new_grasp info:
         """
-        if 'vis_surface' in kwargs and kwargs['vis_surface']:
+        if 'vis_surface' in kwargs:
             vis_surface = kwargs['vis_surface']
         else:
-            vis_surface = False
+            vis_surface = True
         if 'mesh_gripper' in kwargs and kwargs['mesh_gripper']:
             mesh_gripper = kwargs['mesh_gripper']
         else:
@@ -2162,7 +2162,7 @@ class DexterousVacuumGrasp(GraspSampler):
             multi_approach_angle = kwargs['multi_approach_angle']
         else:
             multi_approach_angle = False
-        if 'flg_desample_g' in kwargs and kwargs['flg_desample_g']:
+        if 'flg_desample_g' in kwargs:
             flg_desample_g = kwargs['flg_desample_g']
         else:
             flg_desample_g = False
