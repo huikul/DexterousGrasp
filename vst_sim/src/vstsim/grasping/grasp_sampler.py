@@ -2768,7 +2768,7 @@ class DexterousVacuumGrasp(GraspSampler):
         output_pc = self.scale_obj * output_pc
         rate_filling = 1.0 - float(cnt_null) / float(resolution_pc ** 2)
         output_pc[1, 0, 0] = 1.0 * rate_filling
-        # for PyTorch, only float32 is avaliable for GPU acceleration
+        # for PyTorch, only float32 is available for GPU acceleration
         return True, output_pc.astype(np.float32)
 
 
