@@ -124,8 +124,8 @@ num_projection_steps: 11 #
 
 # the following parameters are only valid when multi_approching_angle is activated
 angle_range_min: 1.0
-angle_range_max: 5.0
-num_angle_steps: 5
+angle_range_max: 30.0
+num_angle_steps: 31
 
 # virtual camera params for dexterous vacuum gripper (defined by Hui Zhang)
 resolution_pc: 24 # resolution of the generated point cloud (e.g.: 24*24)
