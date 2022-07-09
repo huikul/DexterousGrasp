@@ -2365,7 +2365,8 @@ class DexterousVacuumGrasp(GraspSampler):
         # pc_obj = pcl.PointCloud(tmp_data)
         ''''''
         # print("angle_range:", angle_range)
-
+        
+        # define the grasp direction (only for the test and visualized demo)
         angle_scales = np.zeros([1, 1])
         angle_scales_it = it.product(angle_scales, repeat=2)
         # max_z is used to check point clouds qualities
